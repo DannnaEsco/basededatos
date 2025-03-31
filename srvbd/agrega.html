@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width">
+
+ <title>Agregar</title>
+ <script type="module" src="lib/js/submitForm.js"></script>
+ <script type="module" src="lib/js/muestraError.js"></script>
+ <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+ <form onsubmit="submitForm('srv/revista-agrega.php', event)
+    .then(modelo => location.href = 'index.html')
+    .catch(muestraError)">
+
+  <h1>Agregar Revista</h1>
+
+  <p><a href="index.html">Cancelar</a></p>
+
+  <p>
+    <label>
+        Nombre *
+        <input name="nombre" required>
+    </label>
+</p>
+
+<p>
+    <label>
+        Editorial *
+        <input name="editorial" required>
+    </label>
+</p>
+
+<p>
+    <label>
+        Género *
+        <input name="genero" required>
+    </label>
+</p>
+
+<p>* Campos obligatorios</p>
+
+  <p><button type="submit">Agregar</button></p>
+
+ </form>
+
+
+ 
+ <footer>
+    <div class="footer-contenido">
+      <div class="derechos-autor">
+        <p>&copy; 2025 Revistas</p>
+        <p>Todos los derechos reservados. Escalante Rodriguez</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
